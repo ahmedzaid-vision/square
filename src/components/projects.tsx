@@ -1,5 +1,4 @@
-"use client";
-import Image from "next/image";
+
 import Slider from "./slider";
 const Projects = () => {
   const projects = [

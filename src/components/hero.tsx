@@ -1,10 +1,6 @@
-"use client";
-import React from "react";
+
 import Banner from "./banner";
 import Header from "./header";
-import { motion } from "framer-motion";
-import logo from "../../public/hero.jpg";
-import img1 from "../../public/here-imgs/img1.png";
 
 function Hero() {
   const items = [
@@ -62,7 +58,7 @@ function Hero() {
                   alt={item.title}
                   width={600}
                   height={600}
-                  className="w-full "
+                  className="w-full rounded-lg "
                 />
                 <div className="mt-3">
                   <h2 className="text-[18px]  font-bold text-white ">

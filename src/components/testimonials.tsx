@@ -1,10 +1,5 @@
-'use client'
-
-import Image from "next/image";
-import React from "react";
 import "swiper/css";
 import "swiper/css/pagination";
-import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -61,7 +56,7 @@ const Testimonials = () => {
             {testimonialData.map((item) => (
               <SwiperSlide key={item.id}>
                 <div className="text-center flex justify-center items-center">
-                  <Image
+                  <img
                     src={item.src}
                     alt="Square Contracting Logo"
                     width={200}

@@ -1,6 +1,4 @@
-// components/Header.jsx
-"use client";
-import { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineMenu, MdOutlineClose } from "react-icons/md";
 import logo1 from "../../public/logo.png";
@@ -8,15 +6,12 @@ import logo2 from "../../public/square-logo.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hoverActive, setHoverActive] = useState(false);
+  const [, setHoverActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef(null);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
   // handleClickOutside
-  const handleClickOutside = (event:any) => {
+  const handleClickOutside = () => {
     if (headerRef.current) {
       setMenuOpen(false);
     }
@@ -26,18 +21,13 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside );
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  // TestHover
-  const TestHover = () => {
-    setHoverActive(true); 
-    console.log("Test hover");
-  };
 
   // handleScroll
-  const handleScroll = (event: any) => {
+  const handleScroll = () => {
     if (window.scrollY > 100) {
       setScrolled(true);
     } else {
@@ -62,7 +52,11 @@ const Header = () => {
               className="w-[60px] "
             />
           ) : (
-            <img src={logo1} alt="Square Contracting Logo" className="w-[100px]" />
+            <img
+              src={logo1}
+              alt="Square Contracting Logo"
+              className="w-[100px]"
+            />
           )}
         </a>
         {/* Navigation as */}

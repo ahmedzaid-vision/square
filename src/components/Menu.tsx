@@ -1,11 +1,4 @@
-`use client`;
 
-import a from "next/a";
-import React from "react";
-import { FaSearch } from "react-icons/fa";
-import { VscTriangleDown } from "react-icons/vsc";
-
- 
 const MenuItems = [
     {
         name: "Home",
@@ -38,10 +31,10 @@ function Menu({ onHover }: { onHover: boolean }) {
         {MenuItems.map((item, index) => (
           <div
             className="w-full border-b pb-1 px-3 text-black opacity-75"
-            key={item.path}
+            key={index}
           >
             <a href={'asd'} className="py-3 text-[16px]">
-               afsdaf
+               {item.name}
             </a>
           </div>
         ))}
