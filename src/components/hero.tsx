@@ -1,6 +1,7 @@
+import { useState } from "react";
+import { useLocation } from 'react-router-dom';
 
-import Banner from "./banner";
-import Header from "./header";
+
 
 function Hero() {
   const items = [
@@ -22,10 +23,15 @@ function Hero() {
         "Our mission is to provide engineering services (solutions), supply and install steel buildings in Egypt and African market, although global opportunities will be explored. In doing so, we will meet customer expectations of highest quality; leading engineering software; competitive pricing based on a healthy financial rewards for shareholders, and everything we do, we strive to act with honesty, openness, fairness and integrity",
     },
   ];
+  
+
+
+  
+  console.log(location)
+
 
   return (
     <>
-      <Banner />
       <div className="mt-0" id="home">
         <div
           className="h-[70vh] mt-0"
@@ -35,9 +41,7 @@ function Hero() {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}
-        >
-          <Header />
-        </div>
+        ></div>
         <div
           className="px-8 py-10  "
           style={{
@@ -64,7 +68,9 @@ function Hero() {
                   <h2 className="text-[18px]  font-bold text-white ">
                     {item.title}
                   </h2>
-                  <div className="text-white text-[11px] leading-relaxed ">{item.description}</div>
+                  <div className="text-white text-[11px] leading-relaxed ">
+                    {item.description}
+                  </div>
                 </div>
               </div>
             ))}

@@ -1,4 +1,4 @@
-import  { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineMenu, MdOutlineClose } from "react-icons/md";
 import logo1 from "../../public/logo.png";
@@ -9,6 +9,8 @@ const Header = () => {
   const [, setHoverActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const headerRef = useRef(null);
+
+  const [homePage] = useState(location.pathname);
 
   // handleClickOutside
   const handleClickOutside = () => {
@@ -21,7 +23,7 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside );
+      document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -34,13 +36,11 @@ const Header = () => {
       setScrolled(false);
     }
   };
-
   return (
     <header
-      className={` px-8 border-b py-3 bg-[#ebebeb6b] fixed  w-full z-50 ${
-        scrolled ? "bg-white  top-0" : "  md:top-[48px]"
-      }`}
-      ref={headerRef}
+      className={`px-8 border-b  py-3 bg-[#ebebeb6b] fixed top-0 w-full z-50 ${
+        scrolled ? "!bg-white top-0" : "md:top-[48px]"
+      } ${homePage !== "/" ? "bg-[#433e4ed4]" : ""}`}
     >
       {/* <SearchBar /> */}
       <div className="container mx-auto flex justify-between items-center">
@@ -49,7 +49,7 @@ const Header = () => {
             <img
               src={logo2}
               alt="Square Contracting Logo"
-              className="w-[60px] "
+              className="w-[60px]"
             />
           ) : (
             <img
@@ -63,7 +63,7 @@ const Header = () => {
         <nav
           className={`hidden md:flex items-center gap-10  text-[11px] font-bold mb-3  ${
             scrolled ? "!text-[#303030] mb-0 " : "text-white "
-          } `}
+          } ${homePage !== "/" ? "text-white " : ""}`}
         >
           <a href="/" className="">
             Home
@@ -72,8 +72,8 @@ const Header = () => {
             Peb Applications
           </a>
           <a
-            href="/"
-            className="flex items-center gap-1  relative"
+            href="/projects"
+            className="flex items-center gap-1 relative"
             onMouseEnter={() => setHoverActive(true)}
             onMouseLeave={() => setHoverActive(false)}
           >

@@ -1,51 +1,51 @@
-
 import Slider from "./slider";
 const Projects = () => {
   const projects = [
     {
       src: "/projects/p1.jpg",
-      category: "all",
+      text: "Cook Factory- Ismalia City",
     },
     {
       src: "/projects/p2.jpg",
-      category: "all",
+      text: "Food Factory Mezzanine- Alexandria",
     },
     {
       src: "/projects/p3.jpg",
-      category: "one",
+      text: "Generators Shed- Hurghada",
     },
     {
       src: "/projects/p4.jpg",
-      category: "one",
+      text: "Glass Factory- 10th Pf Ramadan City",
+    },
+    {
+      src: "/projects/p5.jpg",
+      text: "Machine Shed- Dameyita",
     },
     {
       src: "/projects/p6.jpg",
-      category: "tow",
-    },
-    {
-      src: "/projects/p6.jpg",
-      category: "tow",
+      text: "Air Conditioner Factory- 10th Of Ramadan City",
     },
     {
       src: "/projects/p7.jpg",
-      category: "three",
+      text: "Bracing Modification- Car Assembley Factory",
     },
     {
       src: "/projects/p8.jpg",
-      category: "three",
+      text: "Boiler Shed-10th Of Ramadan City",
     },
     {
       src: "/projects/p9.jpg",
-      category: "three",
+      text: "Checmical Processing Unit Shed- Aswan",
+    },
+    {
+      src: "/projects/p10.jpg",
+      text: "Glass Factory- 10th Pf Ramadan City",
     },
   ];
 
-
-
-
   return (
     <div
-      className="py-12 px-8 "
+      className="py-12 px-8"
       id="projects"
       style={{
         backgroundImage: `url('/projects/projects-bg.jpg')`,
@@ -58,13 +58,10 @@ const Projects = () => {
         <h2 className="text-xl  mb-4 pb-2 text-white text-center ">
           Latest Projects
         </h2>
-        <div className="w-[13%] h-[2px] bg-white  mx-auto  ">
+        <div className="w-[13%] h-[2px] bg-white mx-auto"></div>
 
-        </div>
-
-        <div className="h-[400px] mt-8  flex flex-wrap gap-7 justify-center">
-           <Slider projects={projects}  />
-
+        <div className=" mt-8 flex flex-wrap gap-7 justify-center">
+          <Slider projects={projects} />
         </div>
       </div>
     </div>
@@ -74,23 +71,3 @@ const Projects = () => {
 export default Projects;
 
 
-
-
-
-
-// {projects.map((project, index) => (
-//   <div
-//     className="w-full md:w-[47%] lg:w-[31%] xl:w-[20%] h-[300px] mt-8 bg-[#005826] rounded-lg shadow-lg"
-//     key={index}
-//   >
-//     <SwiperSlide className="">
-//       <Image
-//         src={project.src}
-//         alt="Square Contracting Logo"
-//         width={300}
-//         height={300}
-//         className={`w-[100%]  object-cover transition-transform duration-150  `}
-//       />
-//     </SwiperSlide>
-//   </div>
-// ))}

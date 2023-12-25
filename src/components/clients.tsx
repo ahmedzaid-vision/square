@@ -14,29 +14,41 @@ const clients = [
 
 export default function ClientSlider() {
   return (
-    <div className="py-10  px-8">
-      <div className="container mx-auto ">
-        <div className="text-xl text-center mb-10  text-[#005826] ">
-          Our Clients
-        </div>
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={4}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwipernpy"
-        >
-          {clients.map((client) => (
-            <SwiperSlide key={client.id}>
-              <img src={client.logo} alt={`Company ${client.id}`} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <div className="py-10 w-full ">
+      <div className="text-xl text-center mb-10  text-[#005826] ">
+        Our Clients
       </div>
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1}
+        centeredSlides={true}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+        className="mySwipernpy w-[60%]"
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
+      >
+        {clients.map((client) => (
+          <SwiperSlide key={client.id}>
+            <img src={client.logo} alt={`Company ${client.id}`} className="" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }

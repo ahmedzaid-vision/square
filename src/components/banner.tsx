@@ -20,7 +20,7 @@ const Banner = () => {
       <div className="container mx-auto py-3 hidden md:flex justify-between items-center font-sans ">
         <div className="flex gap-7">
           <span className="flex items-center gap-2 font-semibold">
-            <FaPhone /> (+2) 0123 456 789
+            <FaPhone /> +2 2633 5248  <span>  </span>   +2 0122 600 220 6
           </span>
           <span className="flex items-center gap-2 font-semibold">
             <FaEnvelope /> info@square-contracting.com

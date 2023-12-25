@@ -28,7 +28,7 @@ export default function Slider({ projects }: { projects: any }) {
           },
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="mySwiper h-[400px]"
       >
         {projects.map((project: any) => (
           <>
@@ -36,8 +36,11 @@ export default function Slider({ projects }: { projects: any }) {
               <img
                 src={project.src}
                 alt="Square Contracting Logo"
-                className={`w-[100%]  object-cover transition-transform duration-150  `}
+                className={`w-[100%] h-[70%]  rounded-md object-cover transition-transform duration-150  `}
               />
+              <div className="mt-2 text-white text-lg font-bold font-sans">
+                {project.text}
+              </div>
             </SwiperSlide>
           </>
         ))}

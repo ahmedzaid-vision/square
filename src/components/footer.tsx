@@ -43,15 +43,19 @@ const Footer = () => {
           <div className="text-xl mb-3">Contact</div>
           <p className="mb-2 flex items-center font-sans">
             <FiMail className="mr-2" />
-            Email: info@example.com
+            Email: info@square-contracting.com
           </p>
           <p className="mb-2 flex items-center font-sans">
             <FiPhone className="mr-2" />
-            Phone: +123 456 7890
+            Phone:{" "}
+            <div className="flex gap-2">
+              {" "}
+              <span>+2 2633 5248</span> <span>+2 0122 600 220 6 </span>{" "}
+            </div>
           </p>
           <p className="flex items-center font-sans">
             <FiMapPin className="mr-2" />
-            Location: Your Company Location
+            Location: 5 Al-Nagma street, Heliopolis, Cairo, Egypt.
           </p>
         </div>
       </div>
