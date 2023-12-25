@@ -1,19 +1,20 @@
 [
-    {
-      "title": "Project 1",
-      "images": ["/projects/p1.jpg", "/projects/p2.jpg", "/projects/p3.jpg", "/projects/p2.jpg"]
-    },
-    {
-      "title": "Project 2",
-      "images": ["/projects/p4.jpg", "/projects/p5.jpg", "/projects/p6.jpg" ]
-    },
-    {
-      "title": "Project 2",
-      "images": ["/projects/p4.jpg", "/projects/p5.jpg", "/projects/p6.jpg" ,"/projects/p6.jpg"  ]
-    },
-    {
-      "title": "Project 2",
-    "images": ["/projects/p4.jpg", "/projects/p5.jpg", "/projects/p6.jpg" ,"/projects/p6.jpg"  ]
-    }
-  ]
-  
+  {
+    "title": "Coldstore warehouse - Cairo Alex Desert rd.",
+    "images": [
+      "/projectsImages/p2/img1.jpg",
+      "/projectsImages/p2/img2.jpg",
+      "/projectsImages/p2/img3.jpg",
+      "/projectsImages/p2/img4.jpg"
+    ]
+  },
+  {
+    "title": "Project 3",
+    "images": [
+      "/projectsImages/p1/img1.jpg",
+      "/projectsImages/p1/img1.jpg",
+      "/projectsImages/p1/img1.jpg",
+      "/projectsImages/p1/img1.jpg"
+    ]
+  }
+]
